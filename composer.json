@@ -1,0 +1,33 @@
+{
+    "name": "kop/yii2-logentries",
+    "description": "Logentries log target for Yii2 framework",
+    "homepage": "http://kop.github.io/yii2-logentries/",
+    "keywords": ["yii", "yii2", "log", "logentries", "target"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/kop/yii2-logentries/issues",
+        "source": "https://github.com/kop/yii2-logentries"
+    },
+    "authors": [
+        {
+            "name": "Ivan Koptiev",
+            "email": "ikoptev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "logentries/logentries-monolog-handler": "~2.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "kop\\y2le\\": ""
+        }
+    }
+}
