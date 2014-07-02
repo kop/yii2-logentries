@@ -4,6 +4,12 @@ Yii2 Logentries
 [Yii2 Logentries (Y2LE)](http://kop.github.io/yii2-logentries) adds a `LogentriesTarget` class that sends Yii2 log
 messages to the [Logentries log management service](https://logentries.com/).
 
+[![Latest Stable Version](https://poser.pugx.org/kop/yii2-logentries/v/stable.svg)](https://packagist.org/packages/kop/yii2-logentries)
+[![Code Climate](https://codeclimate.com/github/kop/yii2-logentries.png)](https://codeclimate.com/github/kop/yii2-logentries)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kop/yii2-logentries/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kop/yii2-logentries/?branch=master)
+[![Version Eye](https://www.versioneye.com/php/kop:yii2-logentries/badge.svg)](https://www.versioneye.com/php/kop:yii2-logentries)
+[![License](https://poser.pugx.org/kop/yii2-logentries/license.svg)](https://packagist.org/packages/kop/yii2-logentries)
+
 ## Requirements
 
 - Yii 2.0 (dev-master)
