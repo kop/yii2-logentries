@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Yii2 Logentries : Logentries log target for Yii2 framework" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Yii2 Logentries</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kop/yii2-logentries">View on GitHub</a>
+
+          <h1 id="project_title">Yii2 Logentries</h1>
+          <h2 id="project_tagline">Logentries log target for Yii2 framework</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kop/yii2-logentries/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kop/yii2-logentries/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="yii2-logentries" class="anchor" href="#yii2-logentries"><span class="octicon octicon-link"></span></a>Yii2 Logentries</h1>
+
+<p><a href="http://kop.github.io/yii2-logentries">Yii2 Logentries (Y2LE)</a> adds a <code>LogentriesTarget</code> class that sends Yii2 log
+messages to the <a href="https://logentries.com/">Logentries log management service</a>.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ul>
+<li>Yii 2.0 (dev-master)</li>
+<li>PHP 5.4</li>
+</ul><blockquote>
+<p>Note:
+This extension mandatorily requires <a href="https://github.com/yiisoft/yii2">Yii Framework 2</a>.
+The framework is under active development and the first stable release of Yii 2 is expected in early 2014.</p>
+</blockquote>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>The preferred way to install this extension is through <a href="http://getcomposer.org/">Composer</a>.</p>
+
+<p>Either run</p>
+
+<p><code>php composer.phar require kop/yii2-logentries "dev-master"</code></p>
+
+<p>or add</p>
+
+<p><code>"kop/yii2-logentries": "dev-master"</code></p>
+
+<p>to the <code>require</code> section of your <code>composer.json</code> file.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Add Logentries target to your log component config:</p>
+
+<div class="highlight highlight-php"><pre><span class="k">return</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="s1">'components'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+        <span class="s1">'log'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+            <span class="s1">'traceLevel'</span> <span class="o">=&gt;</span> <span class="nx">YII_DEBUG</span> <span class="o">?</span> <span class="mi">3</span> <span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">'targets'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                <span class="s1">'file'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                    <span class="s1">'class'</span> <span class="o">=&gt;</span> <span class="s1">'yii\log\FileTarget'</span><span class="p">,</span>
+                    <span class="s1">'levels'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'error'</span><span class="p">,</span> <span class="s1">'warning'</span><span class="p">],</span>
+                <span class="p">],</span>
+                <span class="s1">'logentries'</span> <span class="o">=&gt;</span> <span class="p">[</span>
+                    <span class="s1">'class'</span> <span class="o">=&gt;</span> <span class="s1">'kop\y2le\LogentriesTarget'</span><span class="p">,</span>
+                    <span class="s1">'levels'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'error'</span><span class="p">,</span> <span class="s1">'warning'</span><span class="p">,</span> <span class="s1">'info'</span><span class="p">],</span>
+                    <span class="s1">'categories'</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">'application'</span><span class="p">],</span>
+                    <span class="s1">'logToken'</span> <span class="o">=&gt;</span> <span class="s1">'&lt;&lt;&lt; YOUR KEY HERE &gt;&gt;&gt;'</span><span class="p">,</span>
+                <span class="p">],</span>
+            <span class="p">],</span>
+        <span class="p">],</span>
+    <span class="p">],</span>
+    <span class="o">...</span>
+<span class="p">];</span>
+</pre></div>
+
+<h2>
+<a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
+
+<p>The log destination is specified via <code>$logToken</code> property. Please refer to
+<a href="https://logentries.com/doc/php/">Logentries docs for PHP applications</a> for more details.</p>
+
+<h2>
+<a name="report" class="anchor" href="#report"><span class="octicon octicon-link"></span></a>Report</h2>
+
+<ul>
+<li>Report any issues <a href="https://github.com/kop/yii2-logentries/issues">on the GitHub</a>.</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><strong>yii2-logentries</strong> is released under the MIT License. See the bundled <code>LICENSE.md</code> for details.</p>
+
+<h2>
+<a name="resources" class="anchor" href="#resources"><span class="octicon octicon-link"></span></a>Resources</h2>
+
+<ul>
+<li><a href="http://kop.github.io/yii2-logentries">Project Page</a></li>
+<li><a href="https://packagist.org/packages/kop/yii2-logentries">Packagist Package</a></li>
+<li><a href="https://github.com/kop/yii2-logentries">Source Code</a></li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Yii2 Logentries maintained by <a href="https://github.com/kop">kop</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
