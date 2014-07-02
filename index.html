@@ -37,6 +37,12 @@
 <p><a href="http://kop.github.io/yii2-logentries">Yii2 Logentries (Y2LE)</a> adds a <code>LogentriesTarget</code> class that sends Yii2 log
 messages to the <a href="https://logentries.com/">Logentries log management service</a>.</p>
 
+<p><a href="https://packagist.org/packages/kop/yii2-logentries"><img src="https://poser.pugx.org/kop/yii2-logentries/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://codeclimate.com/github/kop/yii2-logentries"><img src="https://codeclimate.com/github/kop/yii2-logentries.png" alt="Code Climate"></a>
+<a href="https://scrutinizer-ci.com/g/kop/yii2-logentries/?branch=master"><img src="https://scrutinizer-ci.com/g/kop/yii2-logentries/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a>
+<a href="https://www.versioneye.com/php/kop:yii2-logentries"><img src="https://www.versioneye.com/php/kop:yii2-logentries/badge.svg" alt="Version Eye"></a>
+<a href="https://packagist.org/packages/kop/yii2-logentries"><img src="https://poser.pugx.org/kop/yii2-logentries/license.svg" alt="License"></a></p>
+
 <h2>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
@@ -66,6 +72,12 @@ The framework is under active development and the first stable release of Yii 2 
 
 <h2>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<blockquote>
+<p>Note:
+<strong>It works slow!</strong> This log target sends each log entry to the Logentries service in the TCP mode, means it blocks the
+further execution of the PHP application. Make sure you understand this before using this log target.</p>
+</blockquote>
 
 <p>Add Logentries target to your log component config:</p>
 
