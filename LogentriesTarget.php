@@ -62,7 +62,11 @@ class LogentriesTarget extends Target
 
         foreach ($this->messages as $message) {
             if (array_key_exists($message[1], $this->_monologLevels)) {
-                $monolog->addRecord($this->_monologLevels[$message[1]], $this->formatMessage($message), $message[4]);
+                $monolog->addRecord(
+                    $this->_monologLevels[$message[1]],
+                    $this->formatMessage($message),
+                    is_array($message[4]) ? $message[4] : []
+                );
             }
         }
     }

@@ -7,7 +7,7 @@ messages to the [Logentries log management service](https://logentries.com/).
 [![Latest Stable Version](https://poser.pugx.org/kop/yii2-logentries/v/stable.svg)](https://packagist.org/packages/kop/yii2-logentries)
 [![Code Climate](https://codeclimate.com/github/kop/yii2-logentries.png)](https://codeclimate.com/github/kop/yii2-logentries)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kop/yii2-logentries/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/kop/yii2-logentries/?branch=master)
-[![Version Eye](https://www.versioneye.com/php/kop:yii2-logentries/badge.svg)](https://www.versioneye.com/php/kop:yii2-logentries)
+[![Version Eye](https://www.versioneye.com/user/projects/53b356900d5bb8f82a00003d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/53b356900d5bb8f82a00003d)
 [![License](https://poser.pugx.org/kop/yii2-logentries/license.svg)](https://packagist.org/packages/kop/yii2-logentries)
 
 ## Requirements
