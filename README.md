@@ -12,12 +12,8 @@ messages to the [Logentries log management service](https://logentries.com/).
 
 ## Requirements
 
-- Yii 2.0 (dev-master)
+- Yii 2.0
 - PHP 5.4
-
-> Note:
-This extension mandatorily requires [Yii Framework 2](https://github.com/yiisoft/yii2).
-The framework is under active development and the first stable release of Yii 2 is expected in early 2014.
 
 
 ## Installation
