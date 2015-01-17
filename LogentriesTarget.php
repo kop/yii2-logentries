@@ -65,7 +65,7 @@ class LogentriesTarget extends Target
                 $monolog->addRecord(
                     $this->_monologLevels[$message[1]],
                     $this->formatMessage($message),
-                    is_array($message[4]) ? $message[4] : []
+                    isset($message[4]) && is_array($message[4]) ? $message[4] : []
                 );
             }
         }
